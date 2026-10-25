@@ -95,20 +95,12 @@ export default {
                         </ol>
                     </template>
                     <h1>IMPORTANT</h1>
-                    <p>All of the list levels are hosted on 3Dash ultra due to better editor features. When 3Dash 1.3 will be released all of the demon list levels will be on regular 3dash too.</p>
+                    <p>All of the list levels are hosted on 3Dash Ultra.</p>
                     <h4>3Dash Downloads</h4>
                     <p>3Dash: <a href="https://delugedrop.itch.io/3dash" target="_blank">Download</a></p>
                     <p>3Dash Ultra: <a href="https://www.zylex.co/3dash/download.php" target="_blank">Download</a></p>
                     <h4>DEMON LIST REQUIREMENTS</h4>
-                    <p>#1: Level must be at least 30 seconds long</p>
-
-                    <p>#2: Decoration must be decent enough</p>
-
-                    <p>#3: Gameplay must be decently okay</p>
-
-                    <p>#4: Levels must be rated on 3Dash Ultra (applies to new demon list levels only)</p> 
-
-                    <p>Example Level: <a href="https://youtu.be/PFZY1_Zuumw?si=TnRkjxyQG3JBVHn3">Chaotic Machine</a></p>                    
+                    <p>#1: Level must have mostly spam, in any gamemode, with the ability to add a final jump or an auto part.</p>                 
                     <h3>Video Submission Requirements</h3>
                     <p>
                         Achieved the record without using hacks
@@ -137,10 +129,6 @@ export default {
                     <p>
                         Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
                     </p>
-                    <h3>Changelogs</h3>
-                    <p>6/11/26 - Added Mental Hospital at #17</P>
-                    <p>Added serrated at #46</p>
-                    <p>9/9/24 - Kalbunga y Tobogan Added at #3</p>
                 </div>
             </div>
         </main>
