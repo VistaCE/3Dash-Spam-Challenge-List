@@ -3,10 +3,16 @@
     "name": "Irate SPAM EDITION",
     "author": "VistaCE",
     "creators": [],
+    "ldmId": "16284",
     "verifier": "[UK] VistaCE",
     "verification": "https://youtu.be/YHdX7IbGQXA",
     "percentToQualify": 78,
     "records": [
-
+        {
+    "user": "[PL] Ertanger",
+    "link": "https://www.youtube.com/watch?v=eyj8Wwc6614",
+    "percent": 100,
+    "hz": 240
+}
     ]
 }

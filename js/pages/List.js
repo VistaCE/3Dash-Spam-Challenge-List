@@ -50,6 +50,10 @@ export default {
                             <div class="type-title-sm">ID</div>
                             <p>{{ level.id }}</p>
                         </li>
+                        <li v-if="level.ldmId">
+                            <div class="type-title-sm">LDM ID</div>
+                            <p>{{ level.ldmId }}</p>
+                        </li>
                     </ul>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 10"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
