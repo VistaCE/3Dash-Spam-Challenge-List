@@ -4,14 +4,9 @@
     "author": "Optical",
     "creators": [],
     "verifier": "Optical",
+    "spamMethod": "Alternating",
     "verification": "https://youtu.be/EHwzUr7-5o8",
     "percentToQualify": 49,
     "records": [
-        {
-    "user": "[KZ] Daliscreator",
-    "link": "https://youtu.be/EHwzUr7-5o8",
-    "percent": 100,
-    "hz": 240
-}
     ]
 }

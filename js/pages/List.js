@@ -55,6 +55,10 @@ export default {
                             <p>{{ level.ldmId }}</p>
                         </li>
                     </ul>
+                    <div class="spam-method" v-if="level.spamMethod">
+                        <div class="type-title-sm">Spam Method</div>
+                        <p>{{ level.spamMethod }}</p>
+                    </div>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 10"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
                     <p v-else-if="selected +1 <= 10"><strong>100%</strong> or better to qualify</p>
