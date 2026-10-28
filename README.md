@@ -1,5 +1,5 @@
-# The 3DashDemonList
-Official demon list repository for 3Dash Ultra and 3Dash 1.3 (once it releases)
+# The 3Dash Spam Challenge List
+Official spam challenge list repository for 3Dash Ultra.
 
 # List Mods and Maintainers
-- RedactedsLair
+- VistaCE
