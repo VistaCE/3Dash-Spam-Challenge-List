@@ -1,0 +1,34 @@
+.page-time-machine {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+}
+.page-time-machine .time-machine__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem 1rem;
+}
+.page-time-machine .time-machine__bar input {
+    padding: 0.75rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 0.5rem;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+}
+.page-time-machine .time-machine__back {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+.page-time-machine .time-machine__info {
+    text-align: center;
+    padding-inline: 1rem;
+}
+.page-time-machine .time-machine__error {
+    color: var(--color-error);
+}

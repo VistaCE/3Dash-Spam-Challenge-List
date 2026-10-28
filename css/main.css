@@ -11,7 +11,8 @@
 }
 
 main.dark,
-header.dark {
+header.dark,
+.page-time-machine.dark {
     color-scheme: dark;
     --color-background: #1c1b1f;
     --color-on-background: white;

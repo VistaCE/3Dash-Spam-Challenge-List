@@ -5,13 +5,19 @@ import { round, score } from './score.js';
  */
 const dir = 'data';
 
-export async function fetchList() {
-    const listResult = await fetch(`${dir}/_list.json`);
+/**
+ * GitHub repo the site is deployed from, used by the time machine to read past commits
+ */
+const repo = 'VistaCE/3Dash-Spam-Challenge-List';
+const commitsUrl = `https://api.github.com/repos/${repo}/commits?sha=main&per_page=1`;
+
+export async function fetchList(base = dir) {
+    const listResult = await fetch(`${base}/_list.json`);
     try {
         const list = await listResult.json();
         return await Promise.all(
             list.map(async (path, rank) => {
-                const levelResult = await fetch(`${dir}/${path}.json`);
+                const levelResult = await fetch(`${base}/${path}.json`);
                 try {
                     const level = await levelResult.json();
                     return [
@@ -36,14 +42,53 @@ export async function fetchList() {
     }
 }
 
-export async function fetchEditors() {
+export async function fetchEditors(base = dir) {
     try {
-        const editorsResults = await fetch(`${dir}/_editors.json`);
+        const editorsResults = await fetch(`${base}/_editors.json`);
         const editors = await editorsResults.json();
         return editors;
     } catch {
         return null;
     }
+}
+
+async function fetchCommits(url) {
+    const res = await fetch(url);
+    if (res.status === 403 || res.status === 429) {
+        throw new Error('GitHub rate limit reached. Try again in a few minutes.');
+    }
+    if (!res.ok) {
+        throw new Error('Could not reach GitHub. Try again in a few minutes.');
+    }
+    return res;
+}
+
+function toSnapshot(commit) {
+    return {
+        sha: commit.sha,
+        date: new Date(commit.commit.committer.date),
+        message: commit.commit.message.split('\n')[0],
+        dir: `https://raw.githubusercontent.com/${repo}/${commit.sha}/data`,
+    };
+}
+
+/**
+ * Last commit on main at or before `date`, or null if the list didn't exist yet
+ */
+export async function fetchSnapshot(date) {
+    const res = await fetchCommits(`${commitsUrl}&until=${date.toISOString()}`);
+    const [commit] = await res.json();
+    return commit ? toSnapshot(commit) : null;
+}
+
+/**
+ * Date of the first commit on main, i.e. how far back the time machine can go
+ */
+export async function fetchFirstSnapshotDate() {
+    const res = await fetchCommits(commitsUrl);
+    const last = res.headers.get('Link')?.match(/<([^>]+)>;\s*rel="last"/)?.[1];
+    const commits = last ? await (await fetchCommits(last)).json() : await res.json();
+    return toSnapshot(commits[commits.length - 1]).date;
 }
 
 export async function fetchLeaderboard() {
