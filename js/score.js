@@ -26,8 +26,8 @@ export function score(rank, percent, minPercent) {
     // New formula
     // CHANGE (rank-1, 0.x) TO (rank-1, 0.4) FOR ORIGINAL POINT SYSTEM
     // New Point system: (rank-1, 0.484)
-    let score = (-32.3428*Math.pow(rank-1, 0.488) + 100) *
-        ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+    let score = (-30.3428*Math.pow(rank-1, 0.488) + 150) *
+        ((percent - (minPercent - 1)) / (150 - (minPercent - 1)));
 
     score = Math.max(0, score);
 
