@@ -1,0 +1,18 @@
+{
+    "id": "16292",
+    "name": "spam real",
+    "author": "bob10123",
+    "creators": [],
+    "verifier": "bob10123",
+    "spamMethod": "Simple Spam",
+    "verification": "https://youtu.be/XZ6OvrMSOzM",
+    "percentToQualify": 55,
+    "records": [
+                {
+    "user": "[UK] VistaCE",
+    "link": "https://youtu.be/XZ6OvrMSOzM",
+    "percent": 100,
+    "hz": 60
+}
+    ]
+}
