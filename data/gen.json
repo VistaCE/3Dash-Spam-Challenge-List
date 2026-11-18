@@ -1,5 +1,5 @@
 {
-    "id": "16279",
+    "id": "16404",
     "name": "genius",
     "author": "VistaCE",
     "creators": [],
@@ -8,6 +8,11 @@
     "verification": "https://youtu.be/R6zNWGk25yY",
     "percentToQualify": 41,
     "records": [
-
+                {
+    "user": "[SW] Meowthjr",
+    "link": "https://www.youtube.com/watch?v=ZQltTVKRxnQ",
+    "percent": 100,
+    "hz": 240
+}
     ]
 }
